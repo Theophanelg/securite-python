@@ -17,6 +17,8 @@ def main():
     report.generate("array")
 
     report.save(filename)
+    logger.info("Rapport genere: %s", filename)
+    logger.info("\n%s", summary)
 
 
 if __name__ == "__main__":
