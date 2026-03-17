@@ -7,7 +7,7 @@ import pytesseract
 class Captcha:
     def __init__(self, url):
         self.url = url
-        self.image = ""
+        self.image = None
         self.value = ""
         self.session = None
 
@@ -15,7 +15,16 @@ class Captcha:
         """
         Fonction permettant la résolution du captcha.
         """
-        self.value = "FIXME"
+        if self.image is None:
+            logger.error("No captcha image to solve")
+            return
+
+        img_gray = self.image.convert('L')
+
+        raw = pytesseract.image_to_string(img_gray, config=("--psm 8 -c tessedit_char_whitelist=ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789"))
+
+        self.value = raw.strip().replace(" ", "").replace("\n", "")
+        logger.debug(f"OCR : {raw.strip()}, Captcha value: {self.value}")
 
     def capture(self):
         """
@@ -35,7 +44,7 @@ class Captcha:
         if self.image_src.startswith('http'):
             image_url = self.image_src
         else:
-            image_url = self.url.rsplit("/") + "/" + self.image_src.lstrip("/")
+            image_url = self.url.rstrip("/") + "/" + self.image_src.lstrip("/")
         
         logger.debug(f"Captcha image URL: {image_url}")
 
