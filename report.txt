@@ -2,23 +2,25 @@ Rapport d'analyse réseau
 
 === Rapport de capture ===
 Interface: lo
-Nombre de paquets capturés: 20
+Nombre de paquets capturés: 16
 
 === Protocoles capturés ===
-ICMP: 12 paquets
-UDP: 8 paquets
+UDP: 16 paquets
 TCP: 0 paquets
+ICMP: 0 paquets
 ARP: 0 paquets
 OTHER: 0 paquets
 
-Aucune alerte détectée.=== Tableau des protocoles capturés ===
-ICMP      : 12 paquets
-UDP       : 8 paquets
+Aucune alerte détectée.
+=== Tableau des protocoles capturés ===
+UDP       : 16 paquets
 TCP       : 0 paquets
+ICMP      : 0 paquets
 ARP       : 0 paquets
-OTHER     : 0 paquets=== Graphique des protocoles capturés ===
-ICMP      : ################################################## (12 paquets)
-UDP       : ################################# (8 paquets)
+OTHER     : 0 paquets
+=== Graphique des protocoles capturés ===
+UDP       : ################################################## (16 paquets)
 TCP       :  (0 paquets)
+ICMP      :  (0 paquets)
 ARP       :  (0 paquets)
 OTHER     :  (0 paquets)

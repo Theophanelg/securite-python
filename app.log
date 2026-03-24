@@ -18,3 +18,6 @@
 2026-03-14 17:41:51,217 - TP1 - INFO - Starting TP1
 2026-03-14 17:41:52,897 - TP1 - INFO - Démarrage de la capture sur lo (max 20 paquets, timeout 10s)...
 2026-03-14 17:42:02,860 - TP1 - INFO - Capture terminée : 20 paquets capturés
+2026-03-14 17:46:42,965 - TP1 - INFO - Starting TP1
+2026-03-14 17:46:44,959 - TP1 - INFO - Démarrage de la capture sur lo (max 20 paquets, timeout 10s)...
+2026-03-14 17:46:54,988 - TP1 - INFO - Capture terminée : 16 paquets capturés
